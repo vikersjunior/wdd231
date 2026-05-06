@@ -21,15 +21,16 @@
     <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-                <circle cx="50" cy="50" r="45" fill="#000" stroke="#ffe608" stroke-width="2"/>
-                <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="40" font-weight="bold" fill="#ffe608">W</text>
-            </svg>
-            <h1>
-                <span id="student-name">Clement</span>
-            </h1>
+    <header class="page-header">
+        <div class="header-inner">
+            <div class="brand-bar">
+                <span class="brand-name">Clement</span>
+            </div>
+            <nav id="nav-menu" class="nav-menu primary-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#chamber" class="nav-link">Chamber</a>
+                <a href="#final" class="nav-link">Final</a>
+            </nav>
             <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
@@ -38,30 +39,28 @@
         </div>
     </header>
 
-    <nav id="nav-menu" class="nav-menu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="#chamber" class="nav-link">Chamber</a>
-        <a href="#final" class="nav-link">Final</a>
-    </nav>
-
     <main>
-        <h2>Home</h2>
+        <h1 class="page-title">Home</h1>
 
-        <section class="about-section">
-            <h3>About Me</h3>
-            <p>
-                Passionate about web development and creating meaningful digital experiences. I'm currently pursuing the Web and Computer Programming Certificate, building strong foundations in HTML, CSS, JavaScript, and full-stack development. My goal is to create responsive, accessible, and user-friendly applications that solve real-world problems.
-            </p>
-        </section>
+        <div class="page-grid">
+            <section class="about-section">
+                <h2>About Me</h2>
+                <p>
+                    Passionate about web development and creating meaningful digital experiences. I'm currently pursuing the Web and Computer Programming Certificate, building strong foundations in HTML, CSS, JavaScript, and full-stack development. My goal is to create responsive, accessible, and user-friendly applications that solve real-world problems.
+                </p>
+            </section>
 
-        <aside class="student-photo">
-            <h3>Student Photo</h3>
-            <img src="images/profile.webp" alt="Clement - Student Photo" loading="lazy">
-        </aside>
+            <aside class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Clement - Student Photo" loading="lazy">
+            </aside>
+        </div>
 
         <section class="courses-section">
-            <h3>Web Certificate Courses</h3>
-            
+            <div class="courses-header">
+                <h2>Web Certificate Courses</h2>
+            </div>
+
             <div class="filter-buttons">
                 <button id="all-btn" class="filter-btn active">All</button>
                 <button id="cse-btn" class="filter-btn">CSE</button>
