@@ -1,60 +1,29 @@
-/**
- * navigation.js
- * Handles responsive navigation, hamburger menu, and wayfinding
- */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const nav    = document.getElementById('nav-menu');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+  if (!toggle || !nav) return;
 
-    // Hamburger menu toggle
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('closed');
-        });
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    nav.setAttribute('aria-hidden', String(!isOpen));
+  });
+
+  // Close nav when a link is clicked (mobile UX)
+  nav.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      nav.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
-
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (menuToggle) {
-                menuToggle.classList.remove('active');
-                navMenu.classList.add('closed');
-            }
-        });
-    });
-
-    // Wayfinding - Mark current page as active
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
-
-    // Close menu on window resize to larger screens
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-            menuToggle?.classList.remove('active');
-            navMenu?.classList.remove('closed');
-        }
-    });
-
-    // Smooth scroll for anchor links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    });
+  });
 });

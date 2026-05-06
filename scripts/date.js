@@ -1,19 +1,17 @@
-/**
- * date.js
- * Handles dynamic year and last modified date display
- */
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('currentyear');
+  const modEl  = document.getElementById('lastModified');
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Display current year
-    const yearElement = document.getElementById('currentyear');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-    // Display last modified date
-    const lastModifiedElement = document.getElementById('lastModified');
-    if (lastModifiedElement) {
-        const lastModified = document.lastModified;
-        lastModifiedElement.textContent = `Last Modification: ${lastModified}`;
-    }
+  if (modEl) {
+    const d = new Date(document.lastModified);
+    const pad = n => String(n).padStart(2, '0');
+    const formatted =
+      `${pad(d.getMonth() + 1)}/${pad(d.getDate())}/${d.getFullYear()} ` +
+      `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    modEl.textContent = `Last Modification: ${formatted}`;
+  }
 });
