@@ -30,7 +30,7 @@
     <!-- ======================================================
          NAVIGATION
     ====================================================== -->
-    <header class="page-header" role="banner">
+    <header class="page-header">
       <p class="brand-name">Clement</p>
 
       <nav id="nav-menu"
@@ -52,6 +52,8 @@
         <span></span>
       </button>
     </header>
+
+    <main>
 
     <!-- ======================================================
          HERO
@@ -101,6 +103,7 @@
       <!-- Course grid — populated by courses.js -->
       <div id="courses-container"
            class="courses-grid"
+           role="region"
            aria-live="polite"
            aria-label="Course list">
         <!-- Dynamically inserted -->
@@ -112,10 +115,12 @@
       </div>
     </section>
 
+    </main>
+
     <!-- ======================================================
          FOOTER
     ====================================================== -->
-    <footer class="page-footer" role="contentinfo">
+    <footer class="page-footer">
       <div class="footer-top">
         <nav class="social-links" aria-label="Social media links">
           <!-- LinkedIn -->
