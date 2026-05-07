@@ -110,6 +110,25 @@ button {
   gap: var(--space-10);
 }
 
+/* main groups the three content sections with the same rhythm
+   as the original single-section layout */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* credits-section visually belongs to the courses block above.
+   The adjacent sibling selector pulls it back up so the gap between
+   courses-container and credits-summary matches the original inner padding. */
+.courses-container + .credits-section {
+  margin-top: calc(var(--space-6) - var(--space-10));
+}
+
+.credits-section {
+  /* visual comes entirely from .credits-summary inside */
+}
+
 /* ============================================================
    Navigation / Header
    ============================================================ */
@@ -385,6 +404,24 @@ button {
 .course-status.in-progress {
   background: var(--color-status-in-progress-bg);
   color: var(--color-status-in-progress-text);
+}
+
+/* Visually hidden — accessible but not visible */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Credits section wrapper — no extra spacing, inherits page-wrapper gap */
+.credits-section {
+  /* intentionally unstyled — visual comes from .credits-summary inside */
 }
 
 /* Credits Summary */
