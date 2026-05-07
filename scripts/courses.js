@@ -52,8 +52,8 @@ const courses = [
 function getStatusLabel(status) {
   switch (status) {
     case 'completed':    return '✓ Completed';
-    case 'not-started':  return '✓ Not Started';
-    case 'in-progress':  return '✓ In Progress';
+    case 'not-started':  return 'Not Started';
+    case 'in-progress':  return 'In Progress';
     default:             return status;
   }
 }
