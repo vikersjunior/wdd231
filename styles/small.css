@@ -110,23 +110,27 @@ button {
   gap: var(--space-10);
 }
 
-/* main groups the three content sections with the same rhythm
-   as the original single-section layout */
+/* main — no gap here; spacing controlled per-section below */
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
 }
 
-/* credits-section visually belongs to the courses block above.
-   The adjacent sibling selector pulls it back up so the gap between
-   courses-container and credits-summary matches the original inner padding. */
-.courses-container + .credits-section {
-  margin-top: calc(var(--space-6) - var(--space-10));
+/* Hero → Courses: full Figma inter-block spacing (56px) */
+.hero {
+  margin-bottom: var(--space-10);
 }
 
+/* Courses → Credits: tight gap (24px) — credits bar visually
+   reads as the footer of the courses card, matching the original layout */
+.courses-container {
+  margin-bottom: var(--space-6);
+}
+
+/* Credits section has no extra bottom margin needed —
+   page-wrapper gap handles the space to the footer */
 .credits-section {
-  /* visual comes entirely from .credits-summary inside */
+  /* intentionally empty */
 }
 
 /* ============================================================
