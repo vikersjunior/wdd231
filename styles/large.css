@@ -26,10 +26,9 @@
    ============================================================ */
 @media screen and (min-width: 1024px) {
   .page-wrapper {
-    padding: var(--space-9) var(--space-9);
+    padding: var(--space-9);
   }
 
-  /* Hero: bio takes most space, photo aside */
   .hero {
     grid-template-columns: 1fr 344px;
     align-items: stretch;
@@ -40,20 +39,16 @@
     height: 336px;
   }
 
-  /* 3-column course grid */
   .courses-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  /* Footer: single row layout */
   .page-footer {
     flex-direction: row;
     align-items: center;
-    gap: var(--space-4);
   }
 
   .footer-top {
-    width: auto;
     flex-shrink: 0;
   }
 
@@ -67,18 +62,5 @@
   .footer-copyright {
     flex: 1;
     text-align: center;
-  }
-}
-
-/* ============================================================
-   Wide: 1280px+
-   ============================================================ */
-@media screen and (min-width: 1280px) {
-  .page-wrapper {
-    padding: var(--space-9) var(--space-9);
-  }
-
-  .brand-name {
-    font-size: var(--fs-3xl);
   }
 }
