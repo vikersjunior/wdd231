@@ -1,0 +1,28 @@
+{
+  "family_name": "Afotey",
+  "move_in_date": "2024-09-01",
+  "number_of_people": 4,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Clement Nii Odai Afotey",
+      "gender": "Male",
+      "birthdate": "1994-07-11"
+    },
+    {
+      "name": "Annabel Afotey",
+      "gender": "Female",
+      "birthdate": "1970-07-22"
+    },
+    {
+      "name": "Joel Afotey",
+      "gender": "Male",
+      "birthdate": "1968-11-10"
+    },
+    {
+      "name": "Kareen Afotey",
+      "gender": "Female",
+      "birthdate": "2005-05-03"
+    }
+  ]
+}
