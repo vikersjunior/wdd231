@@ -2,7 +2,6 @@
    Design Tokens
    ============================================================ */
 :root {
-  /* Colors — all hex, no rgba */
   --color-bg: #fffef7;
   --color-black: #000000;
   --color-white: #ffffff;
@@ -12,7 +11,6 @@
   --color-nav-hover: #ffffffbf;
   --color-shadow: #0000001a;
 
-  /* Status colors */
   --color-status-completed-bg: #cbffdc;
   --color-status-completed-text: #003010;
   --color-status-not-started-bg: #ffe1d9;
@@ -20,11 +18,9 @@
   --color-status-in-progress-bg: #fcfeba;
   --color-status-in-progress-text: #303100;
 
-  /* Typography */
   --font-display: 'Archivo Black', sans-serif;
   --font-body: 'Inter', Arial, sans-serif;
 
-  /* Font sizes */
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
@@ -33,10 +29,8 @@
   --fs-2xl: 2rem;
   --fs-3xl: 3rem;
 
-  /* Letter spacing */
   --ls-tighter: -0.025em;
 
-  /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -47,12 +41,10 @@
   --space-9: 3rem;
   --space-10: 3.5rem;
 
-  /* Radii */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 
-  /* Shadow */
   --shadow-card: 0px 2px 4px var(--color-shadow);
 }
 
@@ -84,19 +76,19 @@ img {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
 button {
-  font: inherit;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
   cursor: pointer;
   border: none;
   background: none;
 }
 
 /* ============================================================
-   Visually Hidden Utility
+   Visually Hidden
    ============================================================ */
 .visually-hidden {
   position: absolute;
@@ -123,7 +115,7 @@ button {
 }
 
 /* ============================================================
-   Navigation / Header
+   Header / Nav
    ============================================================ */
 .page-header {
   background: var(--color-accent);
@@ -161,7 +153,6 @@ button {
   height: 3px;
   background: var(--color-black);
   border-radius: 999px;
-  display: block;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -204,7 +195,7 @@ button {
 }
 
 /* ============================================================
-   Hero Section
+   Hero
    ============================================================ */
 .hero {
   display: grid;
@@ -227,7 +218,6 @@ button {
 }
 
 .hero-photo {
-  background: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 344 / 336;
@@ -240,7 +230,7 @@ button {
 }
 
 /* ============================================================
-   Courses Container
+   Courses
    ============================================================ */
 .courses-container {
   background: var(--color-white);
@@ -253,15 +243,12 @@ button {
   margin-bottom: var(--space-6);
 }
 
-.courses-header {
-  gap: var(--space-3);
-}
-
 .courses-title {
   font-family: var(--font-display);
   font-size: var(--fs-2xl);
   color: var(--color-black);
   letter-spacing: -0.05em;
+  margin-bottom: var(--space-3);
 }
 
 .courses-divider {
@@ -278,9 +265,6 @@ button {
 }
 
 .filter-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-sm);
   font-weight: 500;
@@ -320,9 +304,6 @@ button {
 }
 
 .course-code {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: var(--space-1) var(--space-3);
   background: var(--color-accent);
   color: var(--color-black);
@@ -353,9 +334,6 @@ button {
 }
 
 .course-status {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
   font-weight: 500;
@@ -412,7 +390,6 @@ button {
   display: flex;
   gap: var(--space-4);
   align-items: center;
-  margin-bottom: var(--space-4);
 }
 
 .social-links a {
@@ -430,7 +407,9 @@ button {
 }
 
 .social-links svg {
-  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  fill: var(--color-accent);
 }
 
 .footer-meta {
