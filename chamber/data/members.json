@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "Kente Weave Studios",
+      "tagline": "Authentic Ghanaian Textiles",
+      "address": "14 Liberation Road, Accra, Ghana",
+      "phone": "+233 30 277 1234",
+      "website": "https://kenteweavestudios.gh",
+      "image": "kente-weave.webp",
+      "membership": 3,
+      "email": "info@kenteweavestudios.gh",
+      "description": "Premium kente cloth and traditional textile artisans serving the Accra region since 1998."
+    },
+    {
+      "name": "GoldCoast Tech Hub",
+      "tagline": "Powering Innovation in West Africa",
+      "address": "7 Cantonments Circle, Accra, Ghana",
+      "phone": "+233 30 290 5678",
+      "website": "https://goldcoasttechhub.com",
+      "image": "goldcoast-tech.webp",
+      "membership": 3,
+      "email": "hello@goldcoasttechhub.com",
+      "description": "Co-working and incubation space for Ghana's fastest-growing tech startups."
+    },
+    {
+      "name": "Nkrumah Logistics",
+      "tagline": "Last-Mile Delivery, Done Right",
+      "address": "23 Tema Motorway, Accra, Ghana",
+      "phone": "+233 30 256 9012",
+      "website": "https://nkrumahlogistics.com",
+      "image": "nkrumah-logistics.webp",
+      "membership": 2,
+      "email": "ops@nkrumahlogistics.com",
+      "description": "Reliable freight and last-mile delivery solutions across Greater Accra."
+    },
+    {
+      "name": "Osu Market Fresh",
+      "tagline": "Farm to Table, Every Day",
+      "address": "Oxford Street, Osu, Accra, Ghana",
+      "phone": "+233 30 278 3456",
+      "website": "https://osumarketfresh.com",
+      "image": "osu-market.webp",
+      "membership": 2,
+      "email": "orders@osumarketfresh.com",
+      "description": "Premium fresh produce, meats, and dairy sourced directly from Ghanaian farms."
+    },
+    {
+      "name": "Labone Legal Associates",
+      "tagline": "Corporate & Commercial Law Experts",
+      "address": "5 Labone Crescent, Accra, Ghana",
+      "phone": "+233 30 276 7890",
+      "website": "https://labonelegal.com",
+      "image": "labone-legal.webp",
+      "membership": 3,
+      "email": "contact@labonelegal.com",
+      "description": "Providing comprehensive legal services to businesses and entrepreneurs in Ghana."
+    },
+    {
+      "name": "Accra Solar Solutions",
+      "tagline": "Clean Energy for a Brighter Ghana",
+      "address": "12 Ring Road East, Accra, Ghana",
+      "phone": "+233 30 221 2345",
+      "website": "https://accrasolarsolutions.com",
+      "image": "accra-solar.webp",
+      "membership": 2,
+      "email": "info@accrasolarsolutions.com",
+      "description": "Residential and commercial solar installation and maintenance across Ghana."
+    },
+    {
+      "name": "Makola Finance Group",
+      "tagline": "Empowering Local Businesses",
+      "address": "Makola Market Square, Accra, Ghana",
+      "phone": "+233 30 266 6789",
+      "website": "https://makolafinance.com",
+      "image": "makola-finance.webp",
+      "membership": 1,
+      "email": "loans@makolafinance.com",
+      "description": "Microfinance and business loans tailored to small and medium enterprises in Ghana."
+    },
+    {
+      "name": "Airport Hills Hospitality",
+      "tagline": "Where Business Meets Comfort",
+      "address": "Airport Residential Area, Accra, Ghana",
+      "phone": "+233 30 277 4567",
+      "website": "https://airporthillshotel.com",
+      "image": "airport-hills.webp",
+      "membership": 3,
+      "email": "reservations@airporthillshotel.com",
+      "description": "Boutique hotel and conference facilities serving Accra's business community."
+    }
+  ]
+}
