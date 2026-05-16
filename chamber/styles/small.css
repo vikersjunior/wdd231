@@ -8,7 +8,7 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-text: #111827;
-  --color-text-muted: #6b7280;
+  --color-text-muted: #4b5563;
   --color-border: #e5e7eb;
   --color-footer-bg: #1f2937;
   --color-shadow: #0000001a;
@@ -71,7 +71,7 @@ a { text-decoration: none; }
 button {
   font-family: var(--font-body);
   cursor: pointer;
-  border: none;
+  border: 0;
 }
 
 /* ============================================================
@@ -156,8 +156,8 @@ button {
   justify-content: space-between;
   width: 2rem;
   height: 1.4rem;
-  background: none;
-  border: none;
+  background: #00000000;
+  border: 0;
   cursor: pointer;
   padding: 0;
   z-index: 101;
@@ -206,7 +206,7 @@ button {
 
 .nav-link[aria-current="page"] {
   background: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 /* ============================================================
