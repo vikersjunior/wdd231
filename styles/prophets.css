@@ -1,3 +1,10 @@
+/* ============================================================
+   prophets.css
+   Page-specific styles only.
+   All tokens, resets, header, footer, nav, and base rules
+   are inherited from small.css + large.css.
+   ============================================================ */
+
 /* Page title */
 .page-title {
   font-family: var(--font-display);
@@ -8,6 +15,7 @@
 
 /* ============================================================
    Prophet Card Grid
+   auto-fit = responsive with no media queries needed
    ============================================================ */
 #cards {
   display: grid;
