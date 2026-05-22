@@ -12,6 +12,17 @@
   --color-border: #e5e7eb;
   --color-footer-bg: #1f2937;
   --color-shadow: #0000001a;
+  --color-transparent: #00000000;
+  --color-overlay-strong: #000000cc;
+  --color-overlay-medium: #00000066;
+  --color-shadow-strong: #00000080;
+  --color-shadow-soft: #00000099;
+  --color-muted-on-dark: #d1d5db;
+  --color-surface-strong: #374151;
+  --color-skeleton-start: #e5e7eb;
+  --color-skeleton-mid: #f3f4f6;
+  --color-badge-gold-bg: #fef3c7;
+  --color-badge-gold-text: #92400e;
 
   --color-gold-badge: #f59e0b;
   --color-silver-badge: #9ca3af;
@@ -156,7 +167,7 @@ button {
   justify-content: space-between;
   width: 2rem;
   height: 1.4rem;
-  background: #00000000;
+  background: var(--color-transparent);
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -384,7 +395,7 @@ button {
 
 .card-line {
   border-radius: 999px;
-  background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%);
+  background: linear-gradient(90deg, var(--color-skeleton-start) 0%, var(--color-skeleton-mid) 50%, var(--color-skeleton-start) 100%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.4s ease-in-out infinite;
 }
@@ -406,14 +417,14 @@ button {
 }
 
 .member-card.is-skeleton .card-logo-placeholder {
-  color: #00000000;
+  color: var(--color-transparent);
 }
 
 .member-card.is-skeleton .membership-badge {
   min-width: 5.75rem;
   min-height: 1.625rem;
-  color: #00000000;
-  background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%);
+  color: var(--color-transparent);
+  background: linear-gradient(90deg, var(--color-skeleton-start) 0%, var(--color-skeleton-mid) 50%, var(--color-skeleton-start) 100%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.4s ease-in-out infinite;
 }
@@ -472,18 +483,18 @@ button {
 }
 
 .membership-badge.gold {
-  background: #fef3c7;
-  color: #92400e;
+  background: var(--color-badge-gold-bg);
+  color: var(--color-badge-gold-text);
 }
 
 .membership-badge.silver {
-  background: #f3f4f6;
-  color: #374151;
+  background: var(--color-secondary);
+  color: var(--color-surface-strong);
 }
 
 .membership-badge.member {
-  background: #e5e7eb;
-  color: #6b7280;
+  background: var(--color-border);
+  color: var(--color-member-badge);
 }
 
 /* ============================================================
@@ -505,7 +516,7 @@ button {
   align-items: center;
   text-align: left;
   padding: var(--space-4);
-  background: #00000000;
+  background: var(--color-transparent);
   min-width: 200px;
   flex-shrink: 0;
 }
@@ -574,12 +585,12 @@ button {
 .footer-brand address {
   font-style: normal;
   font-size: var(--fs-sm);
-  color: #d1d5db;
+  color: var(--color-muted-on-dark);
   line-height: 1.8;
 }
 
 .footer-brand address a {
-  color: #d1d5db;
+  color: var(--color-muted-on-dark);
 }
 
 .footer-social {
@@ -592,7 +603,7 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #374151;
+  background: var(--color-surface-strong);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -612,7 +623,7 @@ button {
 
 .footer-meta {
   font-size: var(--fs-sm);
-  color: #9ca3af;
+  color: var(--color-silver-badge);
   line-height: 1.8;
 }
 

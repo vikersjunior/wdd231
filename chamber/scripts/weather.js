@@ -27,6 +27,26 @@ function cap(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+function setWeatherIcon(iconUrl, description) {
+  if (!iconEl) return;
+
+  iconEl.classList.remove('is-loaded');
+
+  const nextIcon = new Image();
+  nextIcon.onload = () => {
+    iconEl.src = iconUrl;
+    iconEl.alt = description;
+    iconEl.width = 64;
+    iconEl.height = 64;
+    iconEl.classList.add('is-loaded');
+  };
+  nextIcon.onerror = () => {
+    iconEl.alt = description;
+    iconEl.classList.remove('is-loaded');
+  };
+  nextIcon.src = iconUrl;
+}
+
 async function fetchWeatherJson(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -55,10 +75,7 @@ function renderCurrent(data) {
   if (windEl)     windEl.textContent     = `Wind: ${wind} km/h`;
 
   if (iconEl) {
-    iconEl.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-    iconEl.alt = desc;
-    iconEl.width  = 64;
-    iconEl.height = 64;
+    setWeatherIcon(`https://openweathermap.org/img/wn/${icon}@2x.png`, desc);
   }
 }
 
@@ -115,7 +132,7 @@ async function loadWeather() {
     if (humidityEl) humidityEl.textContent = 'Humidity: --%';
     if (windEl) windEl.textContent = 'Wind: -- km/h';
     if (iconEl) {
-      iconEl.removeAttribute('src');
+      iconEl.classList.remove('is-loaded');
       iconEl.alt = 'Weather unavailable';
     }
 
