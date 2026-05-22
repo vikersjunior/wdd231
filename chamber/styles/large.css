@@ -20,6 +20,10 @@
   #members-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  #members-container[aria-busy="true"] {
+    min-height: 920px;
+  }
 }
 
 /* ============================================================
@@ -32,6 +36,10 @@
 
   #members-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #members-container[aria-busy="true"] {
+    min-height: 640px;
   }
 
   .footer-inner {

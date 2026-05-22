@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Accra Chamber of Commerce — connecting local businesses, fostering growth, and building community in Accra, Ghana.">
+  <meta name="author" content="Clement Nii Odai Afotey">
+  <title>Home | Accra Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vikersjunior.github.io/wdd231/chamber/index.html">
+  <meta property="og:title" content="Accra Chamber of Commerce">
+  <meta property="og:description" content="Connecting local businesses, fostering growth, and building community in Accra, Ghana.">
+  <meta property="og:image" content="https://vikersjunior.github.io/wdd231/images/profile.webp">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="Accra Chamber of Commerce">
+
+  <!-- Google Fonts — non-render-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+  </noscript>
+
+  <!-- CSS: shared first, then page-specific -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <!-- Scripts (deferred) -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER — identical to directory.html
+  ====================================================== -->
+  <header class="site-header">
+    <a href="index.html" class="site-logo" aria-label="Accra Chamber of Commerce home">
+      <div class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Accra Chamber</span>
+        <span class="logo-sub">of Commerce</span>
+      </div>
+    </a>
+
+    <nav id="nav-menu"
+         class="primary-nav"
+         aria-label="Primary navigation">
+      <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <a href="directory.html" class="nav-link">Directory</a>
+      <a href="join.html" class="nav-link">Join</a>
+      <a href="discover.html" class="nav-link">Discover</a>
+    </nav>
+
+    <button id="menu-toggle"
+            class="hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ======================================================
+       HERO — with CTA overlay
+  ====================================================== -->
+  <section aria-label="Welcome banner">
+    <div class="hero">
+      <!-- Replace hero.webp with an actual Accra skyline or city image -->
+      <img class="hero-img"
+           src="images/hero.webp"
+           alt="Accra city skyline at dusk"
+           width="1400"
+           height="560"
+           loading="eager"
+           fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Where Accra's<br>Business Community Thrives</h1>
+        <p>Join hundreds of local businesses driving economic growth, building connections, and shaping the future of Accra.</p>
+        <a href="join.html" class="cta-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          </svg>
+          Join the Chamber
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       MAIN CONTENT
+  ====================================================== -->
+  <main>
+    <div class="home-main">
+
+      <!-- ── Current Events ──────────────────────────────── -->
+      <section class="home-section-events" aria-label="Current events">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+          </svg>
+          Current Events
+        </h2>
+        <div class="events-list">
+
+          <article class="event-card">
+            <div class="event-date">
+              <span class="day">14</span>
+              <span class="month">Jun</span>
+            </div>
+            <div class="event-info">
+              <h3>Annual Business Gala 2026</h3>
+              <p>Join us for our flagship networking evening at the Accra International Conference Centre. Dress code: Smart casual. Tickets available at the door.</p>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-date">
+              <span class="day">21</span>
+              <span class="month">Jun</span>
+            </div>
+            <div class="event-info">
+              <h3>SME Growth Workshop</h3>
+              <p>A full-day workshop covering digital marketing, financial management, and scaling strategies for small and medium enterprises in Ghana.</p>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-date">
+              <span class="day">05</span>
+              <span class="month">Jul</span>
+            </div>
+            <div class="event-info">
+              <h3>Quarterly Members Luncheon</h3>
+              <p>Network with fellow chamber members over lunch. Guest speaker: Dr. Kwame Mensah on investment opportunities in Greater Accra.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── Weather ─────────────────────────────────────── -->
+      <section class="home-section-weather" aria-label="Current weather in Accra">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/>
+          </svg>
+          Accra Weather
+        </h2>
+        <div class="weather-card">
+          <div class="weather-current">
+            <div class="weather-main">
+              <img id="weather-icon"
+                   class="weather-icon"
+                   src=""
+                   alt="Weather icon"
+                   width="64"
+                   height="64"
+                   loading="lazy">
+              <span id="weather-temp" class="weather-temp-display">--°C</span>
+            </div>
+            <div class="weather-info">
+              <span id="weather-desc" class="weather-desc-text">Loading…</span>
+              <span id="weather-high" class="weather-meta">High: --°C</span>
+              <span id="weather-humidity" class="weather-meta">Humidity: --%</span>
+              <span id="weather-wind" class="weather-meta">Wind: -- km/h</span>
+            </div>
+          </div>
+          <div id="weather-forecast" class="weather-forecast" aria-label="3-day forecast">
+            <!-- Populated by weather.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Company Spotlights ──────────────────────────── -->
+      <section class="home-section-spotlights" aria-label="Member spotlights">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/>
+          </svg>
+          Member Spotlights
+        </h2>
+        <div id="spotlight-grid" aria-live="polite" aria-label="Featured members">
+          <!-- Populated by spotlights.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================
+       FOOTER — identical to directory.html
+  ====================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <p>Accra Chamber of Commerce</p>
+        <address>
+          Independence Avenue, Accra, Ghana<br>
+          info@accrachamber.org.gh<br>
+          <a href="tel:+233302776000">(+233) 302 776 000</a>
+        </address>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.913 6.75h-3.308l7.73-8.835L.424 2.25h6.755l4.872 6.237 5.193-6.237zM17.002 18.874h1.834L6.287 3.875H4.332l12.67 14.999z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <strong>WDD231 Class Project</strong><br>
+        Clement Nii Odai Afotey<br>
+        &copy; <span id="currentyear">2026</span> Accra Chamber of Commerce<br>
+        <span id="lastModified">Last Modification: --/--/---- --:--:--</span>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
