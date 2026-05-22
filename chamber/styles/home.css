@@ -1,4 +1,3 @@
-
 /* ============================================================
    Hero
    ============================================================ */
@@ -21,7 +20,6 @@
   z-index: 0;
 }
 
-/* Gradient overlay so CTA text is always legible */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -47,13 +45,13 @@
 }
 
 .hero-content p {
-  color: #ffffffcc;
+  color: var(--color-white);
   font-size: var(--fs-base);
   margin-bottom: var(--space-6);
   max-width: 480px;
+  text-shadow: 0 1px 4px #00000099;
 }
 
-/* Call to action button */
 .cta-btn {
   display: inline-flex;
   align-items: center;
@@ -86,7 +84,9 @@
   gap: var(--space-10);
 }
 
-/* Section title pattern */
+/* ============================================================
+   Section title
+   ============================================================ */
 .section-title {
   font-size: var(--fs-xl);
   font-weight: 800;
@@ -108,7 +108,7 @@
 }
 
 /* ============================================================
-   Weather Card
+   Weather
    ============================================================ */
 .weather-card {
   background: var(--color-white);
@@ -204,7 +204,7 @@
 }
 
 /* ============================================================
-   Current Events
+   Events
    ============================================================ */
 .events-list {
   display: flex;
@@ -231,7 +231,6 @@
   padding: var(--space-2) var(--space-3);
   text-align: center;
   min-width: 52px;
-  flex-shrink: 0;
 }
 
 .event-date .day {
@@ -261,7 +260,7 @@
 }
 
 /* ============================================================
-   Spotlight Cards
+   Spotlight grid — cards reuse .member-card from small.css
    ============================================================ */
 #spotlight-grid {
   display: grid;
@@ -298,14 +297,13 @@
     font-size: 3rem;
   }
 
-  /* 3-column home grid: events | weather | spotlights */
   .home-main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
   }
 
-  .home-section-events { grid-column: 1; grid-row: 1; }
-  .home-section-weather { grid-column: 2; grid-row: 1; }
+  .home-section-events    { grid-column: 1; grid-row: 1; }
+  .home-section-weather   { grid-column: 2; grid-row: 1; }
   .home-section-spotlights { grid-column: 1 / -1; grid-row: 2; }
 
   #spotlight-grid {
