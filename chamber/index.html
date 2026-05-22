@@ -97,7 +97,7 @@
            fetchpriority="high">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1>Where Accra's<br>Business Community Thrives</h1>
+        <h1 class="hero-title">Where Accra's<br>Business Community Thrives</h1>
         <p>Join hundreds of local businesses driving economic growth, building connections, and shaping the future of Accra.</p>
         <a href="join.html" class="cta-btn">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
@@ -113,16 +113,17 @@
        MAIN CONTENT
   ====================================================== -->
   <main>
+    
     <div class="home-main">
 
       <!-- ── Current Events ──────────────────────────────── -->
       <section class="home-section-events" aria-label="Current events">
-        <h2 class="section-title">
+        <h1 class="section-title">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
           </svg>
           Current Events
-        </h2>
+        </h1>
         <div class="events-list">
 
           <article class="event-card">
@@ -174,7 +175,6 @@
             <div class="weather-main">
               <img id="weather-icon"
                    class="weather-icon"
-                   src=""
                    alt="Weather icon"
                    width="64"
                    height="64"
@@ -188,7 +188,7 @@
               <span id="weather-wind" class="weather-meta">Wind: -- km/h</span>
             </div>
           </div>
-          <div id="weather-forecast" class="weather-forecast" aria-label="3-day forecast">
+          <div id="weather-forecast" class="weather-forecast" role="group" aria-label="3-day forecast">
             <!-- Populated by weather.js -->
           </div>
         </div>
@@ -202,7 +202,7 @@
           </svg>
           Member Spotlights
         </h2>
-        <div id="spotlight-grid" aria-live="polite" aria-label="Featured members">
+        <div id="spotlight-grid" role="group" aria-live="polite" aria-label="Featured members">
           <!-- Populated by spotlights.js -->
         </div>
       </section>
