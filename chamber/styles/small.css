@@ -525,11 +525,6 @@ button {
   overflow: hidden;
 }
 
-#members-container.list-view .card-list-name {
-  width: 100%;
-  margin-bottom: 0;
-}
-
 #members-container.list-view .card-detail {
   align-items: center;
   min-width: 0;
@@ -664,4 +659,6 @@ button {
 
 #members-container.list-view .card-list-name {
   display: block;
+  width: 100%;
+  margin-bottom: 0;
 }
