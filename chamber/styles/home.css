@@ -1,11 +1,15 @@
 /* ============================================================
+   home.css — page-specific styles for chamber/index.html only.
+   All tokens, resets, header, footer, nav come from small.css.
+   ============================================================ */
+
+/* ============================================================
    Hero
    ============================================================ */
 .hero {
   position: relative;
   width: 100%;
   min-height: 420px;
-  background: var(--color-footer-bg);
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -24,7 +28,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--color-overlay-strong) 0%, var(--color-overlay-medium) 50%, var(--color-transparent) 100%);
+  background: linear-gradient(to top, #000000cc 0%, #00000066 50%, #00000000 100%);
   z-index: 1;
 }
 
@@ -42,7 +46,7 @@
   letter-spacing: -0.05em;
   line-height: 1.1;
   margin-bottom: var(--space-4);
-  text-shadow: 0 2px 8px var(--color-shadow-strong);
+  text-shadow: 0 2px 8px #00000080;
 }
 
 .hero-content p {
@@ -50,7 +54,7 @@
   font-size: var(--fs-base);
   margin-bottom: var(--space-6);
   max-width: 480px;
-  text-shadow: 0 1px 4px var(--color-shadow-soft);
+  text-shadow: 0 1px 4px #00000099;
 }
 
 .cta-btn {
@@ -148,11 +152,13 @@
   height: 64px;
   display: block;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.15s ease;
 }
 
 .weather-icon.is-loaded {
   opacity: 1;
+  visibility: visible;
 }
 
 .weather-info {
@@ -169,7 +175,7 @@
 
 .weather-meta {
   font-size: var(--fs-sm);
-  color: var(--color-muted-on-dark);
+  color: #d1d5db;
 }
 
 .weather-forecast {
@@ -197,7 +203,7 @@
 .forecast-temp {
   font-size: var(--fs-lg);
   font-weight: 800;
-  color: var(--color-primary-dark);
+  color: var(--color-text);
 }
 
 .forecast-desc {

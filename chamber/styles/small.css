@@ -7,28 +7,18 @@
   --color-secondary: #f3f4f6;
   --color-black: #000000;
   --color-white: #ffffff;
+  --color-transparent: #00000000;
   --color-text: #111827;
   --color-text-muted: #4b5563;
   --color-border: #e5e7eb;
   --color-footer-bg: #1f2937;
   --color-shadow: #0000001a;
-  --color-transparent: #00000000;
-  --color-overlay-strong: #000000cc;
-  --color-overlay-medium: #00000066;
-  --color-shadow-strong: #00000080;
-  --color-shadow-soft: #00000099;
-  --color-muted-on-dark: #d1d5db;
-  --color-surface-strong: #374151;
-  --color-skeleton-start: #e5e7eb;
-  --color-skeleton-mid: #f3f4f6;
-  --color-badge-gold-bg: #fef3c7;
-  --color-badge-gold-text: #92400e;
 
   --color-gold-badge: #f59e0b;
-  --color-silver-badge: #9ca3af;
-  --color-member-badge: #6b7280;
+  --color-silver-badge: #374151;
+  --color-member-badge: #374151;
 
-  --font-body: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
 
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
@@ -167,7 +157,7 @@ button {
   justify-content: space-between;
   width: 2rem;
   height: 1.4rem;
-  background: var(--color-transparent);
+  background: #00000000;
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -322,10 +312,6 @@ button {
   gap: var(--space-6);
 }
 
-#members-container[aria-busy="true"] {
-  min-height: 1600px;
-}
-
 /* ============================================================
    Member Card (grid view)
    ============================================================ */
@@ -340,14 +326,13 @@ button {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+#members-container[aria-busy="true"] {
+  min-height: 1800px;
+}
+
 .member-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--color-shadow);
-}
-
-.member-card.is-skeleton:hover {
-  transform: none;
-  box-shadow: var(--shadow);
 }
 
 .card-header {
@@ -391,42 +376,6 @@ button {
 .card-tagline {
   font-size: var(--fs-xs);
   color: var(--color-text-muted);
-}
-
-.card-line {
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--color-skeleton-start) 0%, var(--color-skeleton-mid) 50%, var(--color-skeleton-start) 100%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.4s ease-in-out infinite;
-}
-
-.card-line.name-line {
-  width: 10rem;
-  height: 1.25rem;
-}
-
-.card-line.tagline-line {
-  width: 8rem;
-  height: 0.875rem;
-  margin-top: var(--space-2);
-}
-
-.card-line.detail-line {
-  width: 100%;
-  height: 0.95rem;
-}
-
-.member-card.is-skeleton .card-logo-placeholder {
-  color: var(--color-transparent);
-}
-
-.member-card.is-skeleton .membership-badge {
-  min-width: 5.75rem;
-  min-height: 1.625rem;
-  color: var(--color-transparent);
-  background: linear-gradient(90deg, var(--color-skeleton-start) 0%, var(--color-skeleton-mid) 50%, var(--color-skeleton-start) 100%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.4s ease-in-out infinite;
 }
 
 .card-body {
@@ -483,18 +432,64 @@ button {
 }
 
 .membership-badge.gold {
-  background: var(--color-badge-gold-bg);
-  color: var(--color-badge-gold-text);
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .membership-badge.silver {
-  background: var(--color-secondary);
-  color: var(--color-surface-strong);
+  background: #f3f4f6;
+  color: #374151;
 }
 
 .membership-badge.member {
-  background: var(--color-border);
-  color: var(--color-member-badge);
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.member-card.is-skeleton {
+  pointer-events: none;
+}
+
+.member-card.is-skeleton:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.card-line {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+.card-line.name-line {
+  width: 10rem;
+  height: 1.25rem;
+}
+
+.card-line.tagline-line {
+  width: 8rem;
+  height: 0.875rem;
+  margin-top: var(--space-2);
+}
+
+.card-line.detail-line {
+  width: 100%;
+  height: 0.95rem;
+}
+
+.member-card.is-skeleton .card-logo-placeholder {
+  color: #00000000;
+}
+
+.member-card.is-skeleton .membership-badge {
+  min-width: 5.75rem;
+  min-height: 1.625rem;
+  color: #00000000;
+  background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.4s ease-in-out infinite;
 }
 
 /* ============================================================
@@ -505,54 +500,58 @@ button {
   gap: var(--space-3);
 }
 
+/* List view card: single row, no images */
 #members-container.list-view .member-card {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   border-radius: var(--radius-md);
+  flex-wrap: nowrap;
 }
 
+/* Hide entire card-header in list view (removes logo/initials/image) */
 #members-container.list-view .card-header {
-  flex-direction: row;
-  align-items: center;
-  text-align: left;
-  padding: var(--space-4);
-  background: var(--color-transparent);
-  min-width: 200px;
-  flex-shrink: 0;
-}
-
-#members-container.list-view .card-logo,
-#members-container.list-view .card-logo-placeholder {
-  width: 44px;
-  height: 44px;
-  font-size: var(--fs-base);
-}
-
-#members-container.list-view .card-tagline {
   display: none;
 }
 
+/* Card body fills available space */
 #members-container.list-view .card-body {
+  flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: var(--space-4);
-  gap: var(--space-4);
   align-items: center;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-2) var(--space-5);
+  min-width: 0;
+  overflow: hidden;
+}
+
+#members-container.list-view .card-list-name {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#members-container.list-view .card-detail {
+  align-items: center;
+  min-width: 0;
+}
+
+#members-container.list-view .card-detail svg {
+  margin-top: 0;
 }
 
 #members-container.list-view .card-body img {
   display: none;
 }
 
+/* Badge stays on the right */
 #members-container.list-view .card-footer {
-  border-top: none;
-  border-left: 1px solid var(--color-border);
-  padding: var(--space-4);
-  margin-left: auto;
+  border-top: 1px solid var(--color-border);
+  border-left: none;
+  padding: var(--space-3) var(--space-4);
   flex-shrink: 0;
+  justify-content: flex-end;
 }
 
-/* Hide image column in list view */
 #members-container.list-view .card-img-wrap {
   display: none;
 }
@@ -585,12 +584,12 @@ button {
 .footer-brand address {
   font-style: normal;
   font-size: var(--fs-sm);
-  color: var(--color-muted-on-dark);
+  color: #d1d5db;
   line-height: 1.8;
 }
 
 .footer-brand address a {
-  color: var(--color-muted-on-dark);
+  color: #d1d5db;
 }
 
 .footer-social {
@@ -603,7 +602,7 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--color-surface-strong);
+  background: #374151;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -623,17 +622,12 @@ button {
 
 .footer-meta {
   font-size: var(--fs-sm);
-  color: var(--color-silver-badge);
+  color: #9ca3af;
   line-height: 1.8;
 }
 
 .footer-meta strong {
   color: var(--color-white);
-}
-
-#lastModified {
-  display: inline-block;
-  min-width: 30ch;
 }
 
 @keyframes skeleton-loading {
@@ -655,9 +649,19 @@ button {
     animation-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
 
-  .card-line,
-  .member-card.is-skeleton .membership-badge {
-    animation: none;
-  }
+/* ============================================================
+   Card list name — shown only in list view
+   ============================================================ */
+.card-list-name {
+  display: none;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+#members-container.list-view .card-list-name {
+  display: block;
 }

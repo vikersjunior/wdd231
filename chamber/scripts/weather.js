@@ -133,6 +133,7 @@ async function loadWeather() {
     if (windEl) windEl.textContent = 'Wind: -- km/h';
     if (iconEl) {
       iconEl.classList.remove('is-loaded');
+      iconEl.removeAttribute('src');
       iconEl.alt = 'Weather unavailable';
     }
 
