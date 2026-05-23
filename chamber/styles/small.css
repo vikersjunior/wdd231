@@ -13,11 +13,6 @@
   --color-border: #e5e7eb;
   --color-footer-bg: #1f2937;
   --color-shadow: #0000001a;
-  --color-overlay-strong: #000000cc;
-  --color-overlay-medium: #00000066;
-  --color-shadow-strong: #00000080;
-  --color-shadow-soft: #00000099;
-  --color-muted-on-dark: #d1d5db;
 
   --color-gold-badge: #f59e0b;
   --color-silver-badge: #374151;
@@ -162,7 +157,7 @@ button {
   justify-content: space-between;
   width: 2rem;
   height: 1.4rem;
-  background: var(--color-transparent);
+  background: #00000000;
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -584,12 +579,12 @@ button {
 .footer-brand address {
   font-style: normal;
   font-size: var(--fs-sm);
-  color: var(--color-muted-on-dark);
+  color: #d1d5db;
   line-height: 1.8;
 }
 
 .footer-brand address a {
-  color: var(--color-muted-on-dark);
+  color: #d1d5db;
 }
 
 .footer-social {
@@ -602,7 +597,7 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--color-silver-badge);
+  background: #374151;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -622,7 +617,7 @@ button {
 
 .footer-meta {
   font-size: var(--fs-sm);
-  color: var(--color-muted-on-dark);
+  color: #9ca3af;
   line-height: 1.8;
 }
 
