@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to join the Accra Chamber of Commerce and choose the membership level that fits your organization.">
+  <meta name="author" content="Clement Nii Odai Afotey">
+  <title>Join the Chamber | Accra Chamber of Commerce</title>
+
+  <link rel="icon" href="favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vikersjunior.github.io/wdd231/chamber/join.html">
+  <meta property="og:title" content="Join the Chamber | Accra Chamber of Commerce">
+  <meta property="og:description" content="Submit a membership application and explore the benefits of each chamber membership level.">
+  <meta property="og:image" content="https://vikersjunior.github.io/wdd231/chamber/images/og-chamber.webp">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="Accra Chamber of Commerce">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="site-logo" aria-label="Accra Chamber of Commerce home">
+      <div class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Accra Chamber</span>
+        <span class="logo-sub">of Commerce</span>
+      </div>
+    </a>
+
+    <nav id="nav-menu" class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="directory.html" class="nav-link">Directory</a>
+      <a href="join.html" class="nav-link" aria-current="page">Join</a>
+    </nav>
+
+    <button id="menu-toggle"
+            class="hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <div class="page-wrapper join-page">
+      <section class="page-intro">
+        <p class="eyebrow">Membership Application</p>
+        <h1>Join the Accra Chamber</h1>
+        <p>Complete the application form to connect with local business leaders, access training opportunities, and promote your organization through the chamber network.</p>
+      </section>
+
+      <section class="join-layout" aria-label="Membership application and levels">
+        <div class="join-panel">
+          <h2 class="join-section-title">Application Form</h2>
+          <form class="join-form" method="get" action="thankyou.html">
+            <label class="form-field">
+              <span>Applicant First Name *</span>
+              <input
+                type="text"
+                name="firstName"
+                title="Enter your first name."
+                autocomplete="given-name"
+                required>
+            </label>
+
+            <label class="form-field">
+              <span>Applicant Last Name *</span>
+              <input
+                type="text"
+                name="lastName"
+                title="Enter your last name."
+                autocomplete="family-name"
+                required>
+            </label>
+
+            <label class="form-field">
+              <span>Organizational Title</span>
+              <input
+                type="text"
+                name="organizationTitle"
+                title="Enter your organizational title using only letters, hyphens, and spaces with a minimum of seven characters."
+                autocomplete="organization-title"
+                pattern="[A-Za-z][A-Za-z -]{6,}">
+            </label>
+
+            <label class="form-field">
+              <span>Email Address *</span>
+              <input
+                type="email"
+                name="email"
+                title="Enter your email address."
+                autocomplete="email"
+                placeholder="name@example.com"
+                required>
+            </label>
+
+            <label class="form-field">
+              <span>Mobile Phone Number *</span>
+              <input
+                type="tel"
+                name="phone"
+                title="Enter your mobile phone number."
+                autocomplete="tel"
+                required>
+            </label>
+
+            <label class="form-field">
+              <span>Business / Organization Name *</span>
+              <input
+                type="text"
+                name="organization"
+                title="Enter your business or organization name."
+                autocomplete="organization"
+                required>
+            </label>
+
+            <label class="form-field">
+              <span>Membership Level *</span>
+              <select
+                name="membershipLevel"
+                title="Select your preferred membership level."
+                required>
+                <option value="">Choose a membership level</option>
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+
+            <label class="form-field form-field-full">
+              <span>Business / Organization Description</span>
+              <textarea
+                name="organizationDescription"
+                title="Provide a short description of your organization."
+                rows="5"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <input class="cta-btn" type="submit" value="Submit Membership Application">
+          </form>
+        </div>
+
+        <aside class="membership-panel" aria-label="Membership options">
+          <h2 class="join-section-title">Membership Levels</h2>
+          <div class="membership-cards">
+            <article class="membership-card membership-card-np">
+              <p class="membership-tier">NP Membership</p>
+              <h3>No Fee</h3>
+              <p>Built for nonprofit organizations that want visibility, referrals, and access to chamber programming.</p>
+              <a href="#np-modal" class="membership-link" data-modal-target="np-modal">View NP benefits</a>
+            </article>
+
+            <article class="membership-card membership-card-bronze">
+              <p class="membership-tier">Bronze Membership</p>
+              <h3>Entry Growth Plan</h3>
+              <p>Ideal for small businesses ready to join networking events and receive member-only updates and discounts.</p>
+              <a href="#bronze-modal" class="membership-link" data-modal-target="bronze-modal">View Bronze benefits</a>
+            </article>
+
+            <article class="membership-card membership-card-silver">
+              <p class="membership-tier">Silver Membership</p>
+              <h3>Expanded Reach</h3>
+              <p>Add stronger promotional support, training access, and event discounts for a growing team.</p>
+              <a href="#silver-modal" class="membership-link" data-modal-target="silver-modal">View Silver benefits</a>
+            </article>
+
+            <article class="membership-card membership-card-gold">
+              <p class="membership-tier">Gold Membership</p>
+              <h3>Premier Visibility</h3>
+              <p>Top-tier exposure with premium advertising opportunities, exclusive sponsorship access, and priority perks.</p>
+              <a href="#gold-modal" class="membership-link" data-modal-target="gold-modal">View Gold benefits</a>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </div>
+
+    <dialog id="np-modal" class="membership-modal" aria-labelledby="np-modal-title">
+      <div class="modal-body">
+        <p class="membership-tier">NP Membership</p>
+        <h2 id="np-modal-title">Benefits for Nonprofit Organizations</h2>
+        <ul class="benefits-list">
+          <li>No annual membership fee</li>
+          <li>Listing in the chamber business directory</li>
+          <li>Invitations to community events and outreach programs</li>
+          <li>Access to member newsletters and nonprofit training sessions</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal>Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
+      <div class="modal-body">
+        <p class="membership-tier">Bronze Membership</p>
+        <h2 id="bronze-modal-title">Bronze Level Benefits</h2>
+        <ul class="benefits-list">
+          <li>Everything included in NP visibility benefits</li>
+          <li>Discounted admission to chamber networking events</li>
+          <li>Business promotion in the monthly member bulletin</li>
+          <li>Access to introductory business development workshops</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal>Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
+      <div class="modal-body">
+        <p class="membership-tier">Silver Membership</p>
+        <h2 id="silver-modal-title">Silver Level Benefits</h2>
+        <ul class="benefits-list">
+          <li>All Bronze membership benefits</li>
+          <li>Additional discounts on chamber events and seminars</li>
+          <li>Featured promotion on chamber social channels</li>
+          <li>Priority access to leadership and skills training sessions</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal>Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
+      <div class="modal-body">
+        <p class="membership-tier">Gold Membership</p>
+        <h2 id="gold-modal-title">Gold Level Benefits</h2>
+        <ul class="benefits-list">
+          <li>All Silver membership benefits</li>
+          <li>Homepage spotlight placement and premium directory visibility</li>
+          <li>Exclusive sponsorship opportunities at signature chamber events</li>
+          <li>Priority referrals and VIP invitations to leadership roundtables</li>
+        </ul>
+        <button type="button" class="modal-close" data-close-modal>Close</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p>Accra Chamber of Commerce</p>
+        <address>
+          Independence Avenue, Accra, Ghana<br>
+          info@accrachamber.org.gh<br>
+          <a href="tel:+233302776000">(+233) 302 776 000</a>
+        </address>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.913 6.75h-3.308l7.73-8.835L.424 2.25h6.755l4.872 6.237 5.193-6.237zM17.002 18.874h1.834L6.287 3.875H4.332l12.67 14.999z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <strong>WDD231 Class Project</strong><br>
+        Clement Nii Odai Afotey<br>
+        &copy; <span id="currentyear">2026</span> Accra Chamber of Commerce<br>
+        <span id="lastModified">Last Modification: --/--/---- --:--:--</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
