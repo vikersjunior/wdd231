@@ -9,7 +9,8 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 420px;
+  min-height: 360px;
+  background: var(--color-footer-bg);
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -21,7 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 30%;
   z-index: 0;
 }
 
@@ -35,12 +36,13 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: var(--space-10) var(--space-5);
+  padding: var(--space-8) var(--space-5);
   max-width: 640px;
+  width: 100%;
 }
 
 .hero-title {
-  font-size: var(--fs-2xl);
+  font-size: clamp(1.9rem, 7vw, var(--fs-2xl));
   font-weight: 800;
   color: var(--color-white);
   letter-spacing: -0.05em;
@@ -266,6 +268,11 @@
    Responsive — Tablet 640px+
    ============================================================ */
 @media screen and (min-width: 640px) {
+  .hero {
+    min-height: 420px;
+    align-items: flex-end;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
