@@ -4,7 +4,6 @@
 
 .join-page {
   padding-top: var(--space-10);
-  overflow-x: clip;
 }
 
 .eyebrow {
@@ -61,6 +60,7 @@
   color: var(--color-text);
   font-size: var(--fs-sm);
   font-weight: 700;
+  width: 100%;
 }
 
 .form-field input,
@@ -106,6 +106,8 @@
 
 .join-form .cta-btn {
   width: 100%;
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .membership-card {
@@ -268,10 +270,19 @@
 }
 
 @media screen and (max-width: 767px) {
+  .join-page {
+    overflow-x: hidden;
+  }
+
   .join-panel,
   .membership-panel,
   .thankyou-card {
-    padding: var(--space-5);
+    padding: var(--space-4);
+  }
+
+  .join-form .cta-btn {
+    font-size: var(--fs-sm);
+    padding: 0.75rem 0.9rem;
   }
 }
 
