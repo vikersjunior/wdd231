@@ -256,7 +256,7 @@ button {
 }
 
 .page-intro p {
-  color: var(--color-text-muted);
+  color: #334155;
   font-size: var(--fs-base);
   margin-top: var(--space-2);
 }
@@ -383,7 +383,7 @@ button {
   justify-content: center;
   font-size: var(--fs-xl);
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .card-name {
@@ -396,7 +396,7 @@ button {
 
 .card-tagline {
   font-size: var(--fs-xs);
-  color: var(--color-text-muted);
+  color: #334155;
 }
 
 .card-body {
@@ -424,7 +424,7 @@ button {
 }
 
 .card-detail a {
-  color: var(--color-primary-dark);
+  color: #78350f;
   font-weight: 500;
 }
 
@@ -454,7 +454,7 @@ button {
 
 .membership-badge.gold {
   background: #fef3c7;
-  color: #92400e;
+  color: #78350f;
 }
 
 .membership-badge.silver {
@@ -464,7 +464,7 @@ button {
 
 .membership-badge.member {
   background: #e5e7eb;
-  color: #6b7280;
+  color: #1f2937;
 }
 
 .member-card.is-skeleton {
@@ -593,7 +593,7 @@ button {
 .footer-brand p {
   font-weight: 700;
   font-size: var(--fs-lg);
-  color: var(--color-primary);
+  color: #f9fafb;
   margin-bottom: var(--space-3);
 }
 
@@ -638,7 +638,7 @@ button {
 
 .footer-meta {
   font-size: var(--fs-sm);
-  color: #9ca3af;
+  color: #e5e7eb;
   line-height: 1.8;
 }
 

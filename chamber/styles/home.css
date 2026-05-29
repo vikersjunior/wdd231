@@ -190,7 +190,7 @@
 
 .forecast-desc {
   font-size: var(--fs-xs);
-  color: var(--color-text-muted);
+  color: #334155;
 }
 
 .weather-error {
