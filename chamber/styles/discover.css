@@ -1,0 +1,154 @@
+/* ============================================================
+   W05 Discover Page
+   Named grid areas for small, medium, and large card layouts
+   ============================================================ */
+
+/* Visit Message */
+.visit-message {
+  background: var(--color-white);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  font-weight: 700;
+}
+
+/* Discover Grid */
+.discover-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Discover Card - Mobile */
+.discover-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--space-4);
+  overflow: hidden;
+
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "title"
+    "photo"
+    "description"
+    "address"
+    "button";
+}
+
+/* Card Title */
+.discover-card h2 {
+  grid-area: title;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+/* Card Image */
+.discover-card figure {
+  grid-area: photo;
+  margin: 0;
+}
+
+.discover-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Card Text */
+.discover-card p {
+  grid-area: description;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.discover-card address {
+  grid-area: address;
+  margin: 0;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+/* Button */
+.discover-card .learn-more {
+  grid-area: button;
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.discover-card .learn-more:hover {
+  background: var(--color-primary-dark);
+}
+
+.discover-card .learn-more:focus {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Medium Layout — 641px to 1024px
+   One-column page grid with side-by-side card layout
+   ============================================================ */
+
+@media screen and (min-width: 641px) {
+  .discover-card {
+    grid-template-columns: minmax(220px, 42%) minmax(0, 1fr);
+    grid-template-areas:
+      "title title"
+      "photo description"
+      "photo address"
+      "button button";
+    align-items: start;
+    column-gap: var(--space-4);
+    row-gap: var(--space-3);
+  }
+
+  .discover-card img {
+    height: 100%;
+    min-height: 180px;
+  }
+}
+
+/* ============================================================
+   Large Layout — 1025px+
+   Two-column page grid with the same internal card areas
+   ============================================================ */
+
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .discover-card {
+    grid-template-columns: minmax(240px, 40%) minmax(0, 1fr);
+    column-gap: var(--space-5);
+  }
+
+  .discover-card img {
+    min-height: 200px;
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card:hover img {
+    transform: scale(1.04);
+    filter: brightness(1.05);
+  }
+}
