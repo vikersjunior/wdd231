@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resource attributions for AcquireGH — fonts, references, and tools used in the development of this project.">
+  <meta name="author" content="Clement Nii Odai Afotey">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vikersjunior.github.io/wdd231/final/attributions.html">
+  <meta property="og:title" content="Attributions — AcquireGH">
+  <meta property="og:description" content="Fonts, references, and tools used in the development of AcquireGH.">
+  <meta property="og:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="AcquireGH">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vikersjunior.github.io/wdd231/final/attributions.html">
+  <meta name="twitter:title" content="Attributions — AcquireGH">
+  <meta name="twitter:description" content="Fonts, references, and tools used in the development of AcquireGH.">
+  <meta name="twitter:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  </noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <title>Attributions — AcquireGH</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge" aria-hidden="true">AG</div>AcquireGH
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Browse Listings</a></li>
+          <li><a href="guide.html">Buyer's Guide</a></li>
+          <li><a href="list.html" class="nav-cta">+ List Your Startup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="section-wrap section-wrap--narrow">
+      <p class="section-label">Resources</p>
+      <h1 class="section-title">Attributions</h1>
+      <p class="section-subtitle section-subtitle--spaced">External resources, fonts, and references used in the development of AcquireGH.</p>
+
+      <div class="card-panel">
+
+        <div>
+          <h2 class="card-panel-title">Typography</h2>
+          <ul class="resource-list">
+            <li><strong>Bricolage Grotesque</strong> — <a href="https://fonts.google.com/specimen/Bricolage+Grotesque" target="_blank" rel="noopener" class="link-accent">Google Fonts</a> — OFL License</li>
+            <li><strong>Inter</strong> — <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener" class="link-accent">Google Fonts</a> — OFL License</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="card-panel-title">Reference & Inspiration</h2>
+          <ul class="resource-list">
+            <li>Acquire.com — UI/UX reference for startup acquisition marketplace patterns</li>
+            <li>Tiny Startups — listing card layout reference</li>
+            <li>Ghana Registrar General's Department (rgd.gov.gh) — compliance information</li>
+            <li>Bank of Ghana (bog.gov.gh) — fintech regulatory guidance</li>
+            <li>Ghana Data Protection Commission — Act 843 reference</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="card-panel-title">Tools</h2>
+          <ul class="resource-list">
+            <li>All startup listing data is fictional and created for educational purposes only.</li>
+            <li>Figma — wireframe and design planning</li>
+            <li>W3C Markup Validator — HTML validation</li>
+            <li>WAVE — accessibility evaluation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-badge" aria-hidden="true">AG</div>AcquireGH
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Browse Listings</a>
+        <a href="guide.html">Buyer's Guide</a>
+        <a href="list.html">List a Startup</a>
+        <a href="siteplan.html">Site Plan</a>
+        <a href="attributions.html">Attributions</a>
+      </nav>
+      <div class="footer-copy">
+        <span>© 2025 AcquireGH. WDD 231 Individual Project — Afotey Clement Nii Odai.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './scripts/nav.js';
+    initNav();
+  </script>
+</body>
+</html>

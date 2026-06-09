@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="List your startup on AcquireGH. Submit your Ghanaian startup for acquisition and connect with serious buyers directly.">
+  <meta name="author" content="Clement Nii Odai Afotey">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vikersjunior.github.io/wdd231/final/list.html">
+  <meta property="og:title" content="List Your Startup — AcquireGH">
+  <meta property="og:description" content="Submit your Ghanaian startup for acquisition on AcquireGH. Free listing, no commission.">
+  <meta property="og:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="AcquireGH">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vikersjunior.github.io/wdd231/final/list.html">
+  <meta name="twitter:title" content="List Your Startup — AcquireGH">
+  <meta name="twitter:description" content="Submit your Ghanaian startup for acquisition on AcquireGH. Free listing, no commission.">
+  <meta name="twitter:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  </noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <title>List Your Startup — AcquireGH</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AcquireGH home">
+        <div class="logo-badge" aria-hidden="true">AG</div>
+        AcquireGH
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Browse Listings</a></li>
+          <li><a href="guide.html">Buyer's Guide</a></li>
+          <li><a href="list.html" class="nav-cta">+ List Your Startup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero hero--compact" aria-labelledby="list-heading">
+    <p class="hero-eyebrow">For Founders</p>
+    <h1 id="list-heading" class="hero-heading">List Your Startup</h1>
+    <p>Submit your startup to AcquireGH and connect with buyers looking for exactly what you've built. Free listing, no commission.</p>
+  </section>
+
+  <!-- ── MAIN ── -->
+  <main id="main-content">
+    <div class="form-wrap">
+
+      <!-- Interest pre-fill notice -->
+      <div id="interest-notice" class="notice hidden">
+        <strong>Quick note:</strong> A buyer expressed interest in a startup similar to yours. Fill out the form below and we'll connect you.
+      </div>
+
+      <div class="form-card">
+        <div class="form-card-header">
+          <h2>Startup Listing Form</h2>
+          <p>Fields marked with <span>*</span> are required. Your listing will be reviewed before going live.</p>
+        </div>
+
+        <form class="form-body" id="listing-form" action="form-action.html" method="get" novalidate>
+
+          <!-- Startup name + industry -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startup-name">Startup Name <span>*</span></label>
+              <input type="text" id="startup-name" name="startup_name" placeholder="e.g. PayHive" required minlength="2" maxlength="60" />
+            </div>
+            <div class="form-group">
+              <label for="industry">Industry <span>*</span></label>
+              <select id="industry" name="industry" required>
+                <option value="">Select industry…</option>
+                <option>Fintech</option>
+                <option>Logistics</option>
+                <option>EdTech</option>
+                <option>HealthTech</option>
+                <option>AgriTech</option>
+                <option>PropTech</option>
+                <option>E-Commerce</option>
+                <option>HRTech</option>
+                <option>LegalTech</option>
+                <option>CleanTech</option>
+                <option>FoodTech</option>
+                <option>EventTech</option>
+                <option>SaaS</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Asking price + MRR -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="asking-price">Asking Price (USD) <span>*</span></label>
+              <input type="number" id="asking-price" name="asking_price" placeholder="e.g. 35000" min="500" required />
+            </div>
+            <div class="form-group">
+              <label for="mrr">Monthly Revenue (MRR, USD)</label>
+              <input type="number" id="mrr" name="mrr" placeholder="0 if pre-revenue" min="0" />
+            </div>
+          </div>
+
+          <!-- Founded + Location -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="founded">Year Founded <span>*</span></label>
+              <input type="number" id="founded" name="founded" placeholder="e.g. 2021" min="2010" max="2025" required />
+            </div>
+            <div class="form-group">
+              <label for="location">City / Region <span>*</span></label>
+              <select id="location" name="location" required>
+                <option value="">Select location…</option>
+                <option>Accra</option>
+                <option>Kumasi</option>
+                <option>Tema</option>
+                <option>Takoradi</option>
+                <option>Tamale</option>
+                <option>Cape Coast</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Team size + Stage -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="team-size">Team Size <span>*</span></label>
+              <input type="number" id="team-size" name="team_size" placeholder="e.g. 3" min="1" max="500" required />
+            </div>
+            <div class="form-group">
+              <label for="stage">Deal Stage <span>*</span></label>
+              <select id="stage" name="stage" required>
+                <option value="">Select stage…</option>
+                <option value="Pre-Revenue">Pre-Revenue (asset sale)</option>
+                <option value="Traction">Traction (early revenue)</option>
+                <option value="Revenue">Revenue-Generating</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">What does your startup do? <span>*</span></label>
+            <textarea id="description" name="description" placeholder="Briefly describe your product, who it serves, and how it works. 2–4 sentences." required minlength="40" maxlength="500"></textarea>
+            <p class="form-hint">This will appear on your listing card. Be specific — mention your technology, target market, and key metric if possible.</p>
+          </div>
+
+          <!-- Why selling -->
+          <div class="form-group">
+            <label for="reason">Why are you selling? <span>*</span></label>
+            <textarea id="reason" name="reason" placeholder="e.g. Co-founder split, relocation, pivoting to new idea, etc." required minlength="20" maxlength="300"></textarea>
+          </div>
+
+          <!-- Contact email -->
+          <div class="form-group">
+            <label for="email">Contact Email <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <p class="form-hint">Buyers will reach out via this email. It will not be displayed publicly on your listing.</p>
+          </div>
+
+          <!-- Consent -->
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="consent" name="consent" value="yes" required />
+            <label for="consent">
+              I confirm this startup is mine to sell and the information provided is accurate. I understand AcquireGH is a listing platform and does not provide legal, financial, or brokerage services. <span>*</span>
+            </label>
+          </div>
+
+          <div id="form-error" class="form-error" role="alert"></div>
+
+        </form>
+
+        <div class="form-footer">
+          <p>Free listing · No commission · Direct contact</p>
+          <button type="submit" form="listing-form" class="btn btn-primary" id="submit-btn">Submit Listing →</button>
+        </div>
+      </div><!-- /form-card -->
+
+    </div><!-- /form-wrap -->
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-badge" aria-hidden="true">AG</div>
+        AcquireGH
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Browse Listings</a>
+        <a href="guide.html">Buyer's Guide</a>
+        <a href="list.html">List a Startup</a>
+        <a href="siteplan.html">Site Plan</a>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener">Video Demo ↗</a>
+      </nav>
+      <div class="footer-copy">
+        <span>© 2025 AcquireGH. WDD 231 Individual Project — Afotey Clement Nii Odai.</span>
+        <span>Ghana Startup Acquisition Marketplace</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './scripts/nav.js';
+    import { showToast } from './scripts/utils.js';
+
+    initNav();
+
+    // Pre-fill from URL param (set when "Contact Founder" is clicked from a modal)
+    const params  = new URLSearchParams(window.location.search);
+    const interest = params.get('interest');
+    if (interest) {
+      const notice = document.getElementById('interest-notice');
+      notice.style.display = 'block';
+    }
+
+    // Client-side validation
+    const form = document.getElementById('listing-form');
+    form.addEventListener('submit', (e) => {
+      const errorBox = document.getElementById('form-error');
+      const required = form.querySelectorAll('[required]');
+      let errors = [];
+
+      required.forEach(field => {
+        if (field.type === 'checkbox' && !field.checked) {
+          errors.push('Please check the consent box before submitting.');
+        } else if (field.type !== 'checkbox' && !field.value.trim()) {
+          const label = form.querySelector(`label[for="${field.id}"]`);
+          errors.push(`${label ? label.textContent.replace('*','').trim() : 'A required field'} is missing.`);
+        }
+      });
+
+      if (errors.length > 0) {
+        e.preventDefault();
+        errorBox.classList.add('show');
+        errorBox.innerHTML = `<strong>Please fix the following:</strong><ul>${
+          [...new Set(errors)].map(err => `<li>${err}</li>`).join('')
+        }</ul>`;
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  </script>
+</body>
+</html>

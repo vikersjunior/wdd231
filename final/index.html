@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AcquireGH — Browse and acquire early-stage Ghanaian startups. The premier marketplace for startup M&A in Ghana." />
+  <meta name="author" content="Afotey Clement Nii Odai" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="AcquireGH — Ghana Startup Acquisition Marketplace" />
+  <meta property="og:description" content="Buy and sell early-stage Ghanaian startups. No brokers. No commission." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="images/og-cover.png" />
+  <meta property="og:url"         content="https://acquiregh.com" />
+
+  <title>AcquireGH — Ghana Startup Acquisition Marketplace</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AcquireGH home">
+        <div class="logo-badge" aria-hidden="true">AG</div>
+        AcquireGH
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-menu" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Browse Listings</a></li>
+          <li><a href="guide.html">Buyer's Guide</a></li>
+          <li><a href="list.html" class="nav-cta">+ List Your Startup</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <p class="hero-eyebrow" aria-hidden="true">Ghana's #1 Startup Marketplace</p>
+    <h1 id="hero-heading" class="hero-heading">Acquire Your Next Ghanaian Startup.</h1>
+    <p>Browse vetted early-stage startups available for acquisition. Connect directly with founders — no brokers, no commission.</p>
+    <div class="hero-actions">
+      <a href="#listings" class="btn btn-primary">Browse Listings →</a>
+      <a href="list.html" class="btn btn-outline">List Your Startup</a>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stats-bar" role="region" aria-label="Marketplace stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <strong id="stat-listings">—</strong> Active Listings
+      </div>
+      <div class="stat-item">
+        <strong id="stat-active">—</strong> Revenue-Generating
+      </div>
+      <div class="stat-item">
+        Total Asking: <strong id="stat-asking">—</strong>
+      </div>
+      <div class="stat-item">
+        Avg MRR: <strong id="stat-avg-mrr">—</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FILTER BAR ── -->
+  <div class="filter-bar" role="navigation" aria-label="Filter listings">
+    <div class="filter-inner">
+      <div id="filter-buttons" role="group" aria-label="Filter by industry"></div>
+      <select id="sort-select" class="sort-select" aria-label="Sort listings">
+        <option value="asking-desc">Asking: High → Low</option>
+        <option value="asking-asc">Asking: Low → High</option>
+        <option value="mrr-desc">MRR: High → Low</option>
+        <option value="name-asc">Name: A → Z</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main id="main-content" class="listings-section">
+    <div class="listings-inner">
+
+      <!-- Watchlist banner -->
+      <div class="watchlist-banner hidden" id="watchlist-banner" role="status">
+        <p>You have <strong data-count="0">0</strong> startup(s) saved to your watchlist.</p>
+        <a href="guide.html" class="btn btn-ghost btn-sm">View Guide →</a>
+      </div>
+
+      <div class="listings-header">
+        <p class="listings-count" id="listings-count" aria-live="polite">Loading listings…</p>
+      </div>
+
+      <div class="listings-grid" id="listings-grid" role="list" aria-label="Startup listings">
+        <!-- Populated by JS -->
+        <div class="empty-state">
+          <p>Loading listings…</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-badge" aria-hidden="true">AG</div>
+        AcquireGH
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Browse Listings</a>
+        <a href="guide.html">Buyer's Guide</a>
+        <a href="list.html">List a Startup</a>
+        <a href="siteplan.html">Site Plan</a>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener">Video Demo ↗</a>
+      </nav>
+      <div class="footer-copy">
+        <span>© 2025 AcquireGH. WDD 231 Individual Project — Afotey Clement Nii Odai.</span>
+        <span>Ghana Startup Acquisition Marketplace</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

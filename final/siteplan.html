@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site plan for AcquireGH — a marketplace for buying and selling Ghanaian startups. WDD231 individual project plan.">
+  <meta name="author" content="Clement Nii Odai Afotey">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vikersjunior.github.io/wdd231/final/siteplan.html">
+  <meta property="og:title" content="Site Plan — AcquireGH">
+  <meta property="og:description" content="WDD231 individual project site plan for AcquireGH, a Ghana startup acquisition marketplace.">
+  <meta property="og:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="AcquireGH">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vikersjunior.github.io/wdd231/final/siteplan.html">
+  <meta name="twitter:title" content="Site Plan — AcquireGH">
+  <meta name="twitter:description" content="WDD231 individual project site plan for AcquireGH, a Ghana startup acquisition marketplace.">
+  <meta name="twitter:image" content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap">
+  </noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/siteplan.css">
+
+  <title>Site Plan — AcquireGH</title>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <p class="eyebrow">WDD 231 — Individual Website Project</p>
+    <h1>Site Plan — <span>AcquireGH</span></h1>
+    <p>Ghana Startup Acquisition Marketplace</p>
+  </header>
+
+  <!-- ── NAV ── -->
+  <nav aria-label="Site plan sections">
+    <ul>
+      <li><a href="#site-name">Site Name</a></li>
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#wireframe">Wireframe</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main>
+
+    <!-- 1. SITE NAME -->
+    <section id="site-name">
+      <div class="section-header">
+        <span class="num">01</span>
+        <h2>Site Name</h2>
+      </div>
+      <div class="section-body">
+        <div class="site-name-display">
+          <span>AcquireGH</span>
+          <span class="dot"></span>
+        </div>
+        <p>
+          <strong>AcquireGH</strong> combines "Acquire" — the act of purchasing or taking ownership of a business — with "GH," the universally recognized country code for Ghana. The name is direct, professional, and immediately signals both the action (acquisition) and the geography (Ghana). It positions the platform as the primary destination for startup M&amp;A activity in Ghana while remaining short enough to be memorable and domain-friendly.
+        </p>
+        <p class="section-note section-note--top">
+          Suggested domain: <strong>acquiregh.com</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. PURPOSE -->
+    <section id="purpose">
+      <div class="section-header">
+        <span class="num">02</span>
+        <h2>Site Purpose</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          AcquireGH is a curated marketplace where Ghanaian startup founders can list their ventures for acquisition and where buyers — investors, entrepreneurs, and corporates — can discover, evaluate, and express interest in acquiring early-stage Ghanaian startups.
+        </p>
+
+        <h3>What the site provides</h3>
+        <ul>
+          <li>A browsable listings board of startups available for sale, each with key deal metrics (asking price, monthly revenue, industry, and traction stage)</li>
+          <li>Detailed listing profiles accessible via modal dialogs, showing extended deal information and founder notes</li>
+          <li>A buyer's guide page covering how acquisition deals are structured in the Ghanaian market, common deal types (full acquisition, acqui-hire, asset purchase), and what due diligence looks like at the early stage</li>
+          <li>A "List Your Startup" submission form for founders who are open to acquisition conversations</li>
+          <li>A personal watchlist feature (via local storage) allowing buyers to save and track listings they are interested in</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. SCENARIOS -->
+    <section id="scenarios">
+      <div class="section-header">
+        <span class="num">03</span>
+        <h2>Scenarios</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-note section-note--spaced">The following questions represent real concerns from the two primary audiences of AcquireGH — buyers and sellers.</p>
+        <div class="scenario-list">
+
+          <div class="scenario-card">
+            <p class="persona">Buyer — Angel Investor</p>
+            <p>"I want to acquire a fintech startup in Ghana with some existing monthly revenue. What listings are available and what are they asking for?"</p>
+          </div>
+
+          <div class="scenario-card">
+            <p class="persona">Seller — Early-Stage Founder</p>
+            <p>"I built a logistics app but I'm pivoting. How do I list my startup on AcquireGH so interested buyers can reach me?"</p>
+          </div>
+
+          <div class="scenario-card">
+            <p class="persona">Buyer — Corporate Development</p>
+            <p>"What does an early-stage acquisition deal typically look like in Ghana? Is it different from international markets?"</p>
+          </div>
+
+          <div class="scenario-card">
+            <p class="persona">Buyer — First-Time Acquirer</p>
+            <p>"I found a startup I'm interested in — how do I save it and come back to it later without losing track?"</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. COLOR SCHEME -->
+    <section id="colors">
+      <div class="section-header">
+        <span class="num">04</span>
+        <h2>Color Scheme</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-note section-note--spaced">Four colors form the complete palette. Each color has a defined functional role across the interface.</p>
+        <div class="color-grid">
+
+          <div class="swatch">
+            <div class="swatch-color swatch-color--blue"></div>
+            <div class="swatch-info">
+              <p class="swatch-name">Action Blue</p>
+              <p class="swatch-hex">#0061FE</p>
+              <p class="swatch-use">Primary CTA buttons, links, active nav states, listing tags, section accent borders, and interactive highlights.</p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color swatch-color--cream"></div>
+            <div class="swatch-info">
+              <p class="swatch-name">Warm Cream</p>
+              <p class="swatch-hex">#F7F5F2</p>
+              <p class="swatch-use">Page background, card backgrounds on dark sections, subtle input field fills, and overall warm surface tone.</p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color swatch-color--dark"></div>
+            <div class="swatch-info">
+              <p class="swatch-name">Deep Charcoal</p>
+              <p class="swatch-hex">#1E1919</p>
+              <p class="swatch-use">Site header, footer, section header bars, primary headings, body text, and the hero/nav background.</p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color swatch-color--white"></div>
+            <div class="swatch-info">
+              <p class="swatch-name">Pure White</p>
+              <p class="swatch-hex">#FFFFFF</p>
+              <p class="swatch-use">Card surfaces, modal backgrounds, form inputs, and any panel that needs clean separation from the cream background.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TYPOGRAPHY -->
+    <section id="typography">
+      <div class="section-header">
+        <span class="num">05</span>
+        <h2>Typography</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-copy">Two typefaces are used — one for display and one for body — creating a clear visual hierarchy across the interface.</p>
+
+        <div class="type-specimen">
+          <p class="type-label">Display Font — Bricolage Grotesque (Google Fonts)</p>
+          <p class="type-display-sample">Acquire Your Next Startup.</p>
+          <p class="type-meta">
+            <strong>Used for:</strong> Site name / logo, page headings (h1, h2), section header labels, listing card titles, CTA headlines, and any large typographic feature elements. Weight: 700–800.
+          </p>
+        </div>
+
+        <div class="type-specimen">
+          <p class="type-label">Body Font — Inter (Google Fonts)</p>
+          <p class="type-body-sample">Browse vetted early-stage Ghanaian startups available for acquisition. Connect directly with founders — no brokers, no commission.</p>
+          <p class="type-meta">
+            <strong>Used for:</strong> All body copy, listing descriptions, navigation links, form labels and inputs, metadata, tags, and supporting UI text. Weight: 300–500.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. WIREFRAME -->
+    <section id="wireframe">
+      <div class="section-header">
+        <span class="num">06</span>
+        <h2>Wireframe — Home Page</h2>
+      </div>
+      <div class="section-body">
+        <p class="section-copy">Layout diagrams for the home page (index.html) in mobile (320px) and desktop (1024px+) viewports.</p>
+
+        <div class="wireframe-grid">
+
+          <!-- MOBILE WIREFRAME -->
+          <div class="wireframe-container">
+            <p class="wireframe-label">Mobile — 320px</p>
+            <div class="wf-frame">
+              <img class="wireframe-art" src="images/mobile.svg" alt="AcquireGH wireframe artboard for the mobile layout" />
+            </div>
+          </div>
+
+          <!-- DESKTOP WIREFRAME -->
+          <div class="wireframe-container">
+            <p class="wireframe-label">Desktop — 1024px+</p>
+            <div class="wf-frame">
+              <img class="wireframe-art" src="images/desktop.svg" alt="AcquireGH wireframe artboard for the desktop layout" />
+            </div>
+          </div>
+
+        </div><!-- /wireframe-grid -->
+
+        <p class="section-note section-note--top">
+          <strong>Modal overlay</strong> (not shown above): Clicking "View Details" triggers a full-screen modal with extended deal info — revenue trend, founder bio, tags, and a contact/watchlist CTA. Modal is accessible with keyboard dismiss and focus trap.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>WDD 231 — Individual Website Project &nbsp;|&nbsp; <strong>AcquireGH</strong> Site Plan &nbsp;|&nbsp; Afotey Clement Nii Odai</p>
+  </footer>
+
+</body>
+</html>
