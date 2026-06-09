@@ -9,8 +9,8 @@
   --cream:      #F7F5F2;
   --dark:       #1E1919;
   --white:      #ffffff;
-  --blue-08:    rgba(0,97,254,.08);
-  --blue-15:    rgba(0,97,254,.15);
+  --blue-08:    #ECF4FF;
+  --blue-15:    #DDEBFF;
   --blue-dark:  #003e9a;
   --blue-text:  #0047B3;
   --dark-08:    rgba(30,25,25,.08);
@@ -255,7 +255,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
-  background: var(--blue-15);
+  background: rgba(0, 97, 254, .18);
   padding: 0.25rem 0.65rem;
   border-radius: 100px;
   margin-bottom: 1.25rem;
@@ -1079,7 +1079,8 @@ strong {
 }
 
 .link-accent {
-  color: var(--blue);
+  color: var(--blue-text);
+  font-weight: 600;
 }
 
 .empty-data {
@@ -1246,7 +1247,6 @@ strong {
   font-weight: 800;
   color: var(--dark);
   margin-bottom: 1rem;
-  padding-top: 0.25rem;
   border-top: 2px solid var(--blue);
   padding-top: 1rem;
 }
@@ -1604,11 +1604,6 @@ body.success-page main {
   border-color: var(--border);
 }
 
-.empty-data {
-  color: var(--dark-40);
-  padding: 1rem 0;
-}
-
 @media (max-width: 640px) {
   .action-wrap {
     padding: 1.5rem 1rem 3rem;
@@ -1702,3 +1697,5 @@ body.success-page main {
   .form-body { padding: 1.25rem; }
   .form-footer { padding: 1rem 1.25rem 1.5rem; }
 }
+
+.page-content { width: 100%; }
