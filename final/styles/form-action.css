@@ -1,1 +1,166 @@
 /* form-action.css — page-specific styles for AcquireGH. Shared styling lives in main.css. */
+
+/* ─────────────────────────────────────────
+   PAGE-SPECIFIC: SUCCESS PAGE
+───────────────────────────────────────── */
+body.success-page {
+  background:
+    radial-gradient(circle at top left, rgba(0,71,179,.10), transparent 36%),
+    radial-gradient(circle at top right, rgba(0,71,179,.08), transparent 28%),
+    var(--cream);
+}
+
+body.success-page main {
+  flex: 1;
+}
+
+.action-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 760px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.success-header {
+  padding: 2rem 2rem 1.75rem;
+  background: linear-gradient(135deg, var(--dark), #2a2323);
+  color: var(--white);
+  text-align: center;
+}
+
+.success-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 1rem;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.35rem;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(0,71,179,.28);
+}
+
+.success-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  margin-bottom: 0.6rem;
+}
+
+.success-header p {
+  max-width: 56ch;
+  margin: 0 auto;
+  color: rgba(255,255,255,.82);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.data-section {
+  padding: 1.75rem 2rem 0.5rem;
+}
+
+.data-section h2 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-40);
+  margin-bottom: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.data-table tr:nth-child(even) {
+  background: #fbf9f7;
+}
+
+.data-table td {
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--dark);
+  font-size: 0.92rem;
+}
+
+.data-table tr:first-child td {
+  border-top: 0;
+}
+
+.data-table td:first-child {
+  width: 34%;
+  font-weight: 600;
+  color: var(--dark-40);
+}
+
+.data-table td:last-child {
+  word-break: break-word;
+}
+
+.action-footer {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.action-footer .action-link {
+  min-width: 170px;
+  justify-content: center;
+}
+
+.action-footer .action-link.action-ghost {
+  border-color: var(--border);
+}
+
+@media (max-width: 640px) {
+  .action-wrap {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .success-header,
+  .data-section,
+  .action-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .data-table td {
+    padding: 0.8rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .data-table td:first-child {
+    width: 40%;
+  }
+
+  .action-footer {
+    justify-content: stretch;
+  }
+
+  .action-footer .action-link {
+    width: 100%;
+  }
+}
+
