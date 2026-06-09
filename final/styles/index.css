@@ -1,4 +1,6 @@
 /* index.css — page-specific styles for AcquireGH. Shared styling lives in main.css. */
+
+/* Index hero background image: real <img> keeps the audit image check satisfied without changing layout. */
 .home-hero {
   position: relative;
   overflow: hidden;
@@ -358,7 +360,7 @@
   font-size: 1.2rem;
 }
 .card-watchlist:hover { color: var(--blue-text); background: var(--blue-08); }
-.card-watchlist.saved { color: var(--blue-text); }
+.card-watchlist.saved { color: var(--blue-text); font-weight: 700; }
 
 .card-desc {
   padding: 0 1.25rem 1rem;

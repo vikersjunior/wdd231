@@ -143,7 +143,9 @@ export function openModal(startup) {
     const cardBtn = document.querySelector(`.card-watchlist[data-id="${startup.id}"]`);
     if (cardBtn) {
       cardBtn.classList.toggle('saved', result.added);
+      cardBtn.textContent = result.added ? '♥' : '♡';
       cardBtn.setAttribute('aria-label', result.added ? 'Remove from watchlist' : 'Save to watchlist');
+      cardBtn.setAttribute('aria-pressed', result.added ? 'true' : 'false');
     }
     updateWatchlistBanner();
   });

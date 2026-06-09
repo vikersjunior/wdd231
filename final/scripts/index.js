@@ -118,8 +118,7 @@ function renderListings(data) {
       const id      = actionButton.dataset.id;
       const startup = allStartups.find(s => s.id === id);
       const result  = toggleWatchlist(id);
-      actionButton.classList.toggle('saved', result.added);
-      actionButton.setAttribute('aria-label', result.added ? 'Remove from watchlist' : 'Save to watchlist');
+      updateCardWatchlistButton(actionButton, result.added);
       if (result.added) {
         showToast(`${startup?.name} added to watchlist ♥`);
       } else {
@@ -139,6 +138,14 @@ function renderListings(data) {
   });
 }
 
+
+function updateCardWatchlistButton(actionButton, isSaved) {
+  actionButton.classList.toggle('saved', isSaved);
+  actionButton.textContent = isSaved ? '♥' : '♡';
+  actionButton.setAttribute('aria-label', isSaved ? 'Remove from watchlist' : 'Save to watchlist');
+  actionButton.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
+}
+
 function buildCard(s, watchlist) {
   const isSaved = watchlist.includes(s.id);
   const mrr     = formatCurrency(s.mrr);
@@ -155,7 +162,8 @@ function buildCard(s, watchlist) {
         <span class="card-industry">${s.industry}</span>
       </div>
       <button class="card-watchlist ${isSaved ? 'saved' : ''}" data-id="${s.id}"
-        aria-label="${isSaved ? 'Remove from watchlist' : 'Save to watchlist'}">
+        aria-label="${isSaved ? 'Remove from watchlist' : 'Save to watchlist'}"
+        aria-pressed="${isSaved ? 'true' : 'false'}">
         ${isSaved ? '♥' : '♡'}
       </button>
     </div>
