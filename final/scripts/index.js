@@ -40,14 +40,14 @@ function buildFilterButtons(data) {
 
   const bar = document.getElementById('filter-buttons');
   bar.innerHTML = industries.map(ind =>
-    `<button class="filter-btn${ind === activeFilter ? ' active' : ''}" data-filter="${ind}">${ind}</button>`
+    `<button class="filter-chip${ind === activeFilter ? ' active' : ''}" data-filter="${ind}">${ind}</button>`
   ).join('');
 
   bar.addEventListener('click', (e) => {
-    const btn = e.target.closest('.filter-btn');
-    if (!btn) return;
-    activeFilter = btn.dataset.filter;
-    bar.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === activeFilter));
+    const actionButton = e.target.closest('.filter-chip');
+    if (!actionButton) return;
+    activeFilter = actionButton.dataset.filter;
+    bar.querySelectorAll('.filter-chip').forEach(b => b.classList.toggle('active', b.dataset.filter === activeFilter));
     setPref('filter', activeFilter);
     applyFiltersAndSort();
   });
@@ -112,14 +112,14 @@ function renderListings(data) {
     });
   });
 
-  grid.querySelectorAll('.card-watchlist').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  grid.querySelectorAll('.card-watchlist').forEach(actionButton => {
+    actionButton.addEventListener('click', (e) => {
       e.stopPropagation();
-      const id      = btn.dataset.id;
+      const id      = actionButton.dataset.id;
       const startup = allStartups.find(s => s.id === id);
       const result  = toggleWatchlist(id);
-      btn.classList.toggle('saved', result.added);
-      btn.setAttribute('aria-label', result.added ? 'Remove from watchlist' : 'Save to watchlist');
+      actionButton.classList.toggle('saved', result.added);
+      actionButton.setAttribute('aria-label', result.added ? 'Remove from watchlist' : 'Save to watchlist');
       if (result.added) {
         showToast(`${startup?.name} added to watchlist ♥`);
       } else {
@@ -129,10 +129,10 @@ function renderListings(data) {
     });
   });
 
-  grid.querySelectorAll('.card-cta').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  grid.querySelectorAll('.card-cta').forEach(actionButton => {
+    actionButton.addEventListener('click', (e) => {
       e.stopPropagation();
-      const id      = btn.dataset.id;
+      const id      = actionButton.dataset.id;
       const startup = allStartups.find(s => s.id === id);
       if (startup) openModal(startup);
     });

@@ -287,7 +287,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   gap: 0.75rem;
 }
 
-.btn {
+.action-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -301,36 +301,36 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border: none;
 }
 
-.btn-primary {
+.action-primary {
   background-color: var(--blue);
   color: var(--white);
 }
-.btn-primary:hover { background-color: var(--blue-dark); transform: translateY(-1px); }
+.action-primary:hover { background-color: var(--blue-dark); transform: translateY(-1px); }
 
-.btn-outline {
+.action-outline {
   background: transparent;
   color: var(--white);
   border: 1.5px solid rgba(255,255,255,.25);
 }
-.btn-outline:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
+.action-outline:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
 
-.btn-sm {
+.action-small {
   font-size: 0.8rem;
   padding: 0.35rem 0.875rem;
 }
 
-.btn-dark {
+.action-dark {
   background-color: var(--dark);
   color: var(--white);
 }
-.btn-dark:hover { background-color: #2e2828; }
+.action-dark:hover { background-color: #2e2828; }
 
-.btn-ghost {
+.action-ghost {
   background: transparent;
   color: var(--dark-40);
   border: 1.5px solid var(--border);
 }
-.btn-ghost:hover { border-color: var(--dark); color: var(--dark); }
+.action-ghost:hover { border-color: var(--dark); color: var(--dark); }
 
 strong {
   color: var(--dark);
@@ -395,7 +395,7 @@ strong {
   gap: 0.65rem 0.55rem;
 }
 
-.filter-btn {
+.filter-chip {
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.3rem 0.85rem;
@@ -407,8 +407,8 @@ strong {
   white-space: nowrap;
   line-height: 1.5;
 }
-.filter-btn:hover { border-color: var(--dark); color: var(--dark); }
-.filter-btn.active {
+.filter-chip:hover { border-color: var(--dark); color: var(--dark); }
+.filter-chip.active {
   background-color: var(--dark);
   border-color: var(--dark);
   color: var(--white);
@@ -424,7 +424,7 @@ strong {
   #filter-buttons {
     gap: 0.55rem 0.45rem;
   }
-  .filter-btn {
+  .filter-chip {
     font-size: 0.75rem;
     padding: 0.28rem 0.75rem;
   }
@@ -987,7 +987,7 @@ strong {
   flex-wrap: wrap;
 }
 
-.modal-actions .btn { flex: 1; justify-content: center; min-width: 130px; }
+.modal-actions .action-link { flex: 1; justify-content: center; min-width: 130px; }
 
 /* ─────────────────────────────────────────
    SECTION GENERIC
@@ -1595,12 +1595,12 @@ body.success-page main {
   gap: 0.75rem;
 }
 
-.action-footer .btn {
+.action-footer .action-link {
   min-width: 170px;
   justify-content: center;
 }
 
-.action-footer .btn.btn-ghost {
+.action-footer .action-link.action-ghost {
   border-color: var(--border);
 }
 
@@ -1629,7 +1629,7 @@ body.success-page main {
     justify-content: stretch;
   }
 
-  .action-footer .btn {
+  .action-footer .action-link {
     width: 100%;
   }
 }

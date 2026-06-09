@@ -10,7 +10,7 @@
   <meta property="og:title"       content="AcquireGH — Ghana Startup Acquisition Marketplace" />
   <meta property="og:description" content="Buy and sell early-stage Ghanaian startups. No brokers. No commission." />
   <meta property="og:type"        content="website" />
-  <meta property="og:image"       content="images/og-cover.png" />
+  <meta property="og:image"       content="https://vikersjunior.github.io/wdd231/final/images/og-cover.png" />
   <meta property="og:url"         content="https://acquiregh.com" />
 
   <title>AcquireGH — Ghana Startup Acquisition Marketplace</title>
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/index.css" />
+  <script type="module" src="scripts/index.js" defer></script>
 </head>
 <body>
 
@@ -56,8 +57,8 @@
     <h1 id="hero-heading" class="hero-heading">Acquire Your Next Ghanaian Startup.</h1>
     <p>Browse vetted early-stage startups available for acquisition. Connect directly with founders — no brokers, no commission.</p>
     <div class="hero-actions">
-      <a href="#listings" class="btn btn-primary">Browse Listings →</a>
-      <a href="list.html" class="btn btn-outline">List Your Startup</a>
+      <a href="#listings" class="action-link action-primary">Browse Listings →</a>
+      <a href="list.html" class="action-link action-outline">List Your Startup</a>
     </div>
   </section>
 
@@ -99,7 +100,7 @@
       <!-- Watchlist banner -->
       <div class="watchlist-banner hidden" id="watchlist-banner" role="status">
         <p>You have <strong data-count="0">0</strong> startup(s) saved to your watchlist.</p>
-        <a href="guide.html" class="btn btn-ghost btn-sm">View Guide →</a>
+        <a href="guide.html" class="action-link action-ghost action-small">View Guide →</a>
       </div>
 
       <div class="listings-header">
@@ -141,6 +142,5 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

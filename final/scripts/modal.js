@@ -120,23 +120,23 @@ export function openModal(startup) {
     </div>
 
     <div class="modal-actions">
-      <button class="btn btn-primary" id="modal-contact-btn">
+      <button class="action-link action-primary" id="modal-contact-action">
         Contact Founder →
       </button>
-      <button class="btn btn-ghost" id="modal-watchlist-btn" data-id="${startup.id}">
+      <button class="action-link action-ghost" id="modal-watchlist-action" data-id="${startup.id}">
         ${isSaved ? '♥ Saved' : '♡ Watchlist'}
       </button>
     </div>`;
 
   // Watchlist toggle inside modal
-  document.getElementById('modal-watchlist-btn').addEventListener('click', () => {
+  document.getElementById('modal-watchlist-action').addEventListener('click', () => {
     const result = toggleWatchlist(startup.id);
-    const btn    = document.getElementById('modal-watchlist-btn');
+    const actionButton    = document.getElementById('modal-watchlist-action');
     if (result.added) {
-      btn.textContent = '♥ Saved';
+      actionButton.textContent = '♥ Saved';
       showToast(`${startup.name} added to watchlist`);
     } else {
-      btn.textContent = '♡ Watchlist';
+      actionButton.textContent = '♡ Watchlist';
       showToast(`${startup.name} removed from watchlist`);
     }
     // Sync card button if visible
@@ -148,7 +148,7 @@ export function openModal(startup) {
     updateWatchlistBanner();
   });
 
-  document.getElementById('modal-contact-btn').addEventListener('click', () => {
+  document.getElementById('modal-contact-action').addEventListener('click', () => {
     closeModal();
     window.location.href = `list.html?interest=${encodeURIComponent(startup.name)}`;
   });
